@@ -1,6 +1,6 @@
 ## 欢迎来到“多源信息融合”课程
 
-课程网站 [editor on GitHub](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/edit/master/README.md) 包含了这门课程的所有信息。
+课程网站 [data fusion on GitHub](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/edit/master/README.md) 包含了这门课程的所有信息。
 
 ## 课程内容
    本课程共分为九大部分。它们是
