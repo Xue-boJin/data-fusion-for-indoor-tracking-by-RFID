@@ -15,23 +15,4 @@
 8. RFID室内跟踪方法I
 9. RFID室内跟踪方法II
 
-   课程资料放在每一个子目录下，每个子目录的名字以“Lesson”开头，后面加数字，例如**Lesson1**表示_第一次课_。
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-
+   课程资料放在每一个子目录下，每个子目录的名字以“Lesson”开头，后面加数字，例如**Lesson1**表示"第一次课"。
