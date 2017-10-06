@@ -2,8 +2,20 @@
 
 课程网站 [editor on GitHub](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/edit/master/README.md) 包含了这门课程的所有信息。
 
+## 课程内容
+   本课程共分为九大部分。它们是
 
-### Markdown
+1. 多源信息融合技术介绍及传感器测量的特点
+2. RFID室内跟踪系统介绍
+3. 目标跟踪的机动模型
+4. Kalman滤波器 
+5. 融合方法I
+6. 融合方法II
+7. 非线性估计方法
+8. RFID室内跟踪方法I
+9. RFID室内跟踪方法II
+
+   课程资料放在每一个子目录下，每个子目录的名字以“Lesson”开头，后面加数字，例如**Lesson1**表示_第一次课_。
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -22,15 +34,4 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
