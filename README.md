@@ -50,7 +50,7 @@ MATLAB语言编写程序的第二部分是设置问题中交代的因变量，�
     plot(s1)
     xlabel(‘采样时刻’)
     ylabel(‘测量数据’)
-![模拟传感器A的测量数据输出](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/master/resource/模拟传感器A的测量数据输出.png)
+![模拟传感器A的测量数据输出](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/tree/resource/模拟传感器A的测量数据输出.png)
 
     MATLAB画图函数非常丰富，还可以对图设定适当的标注来提高效果图的表达方式和内容，增强可视化效果，比如横坐标、纵坐标的设置，用不同线型来区别不同变量的曲线，或在一张图上画出多个图进行对比分析。详情可查阅MATLAB相关书籍，本书不再详述，在以后的应用中，会直接给出程序及对应的函数。
 下面再看几个类似的例子：
