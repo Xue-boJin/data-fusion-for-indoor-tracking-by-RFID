@@ -59,6 +59,8 @@ MATLAB首先寻找变量b的值，如果内存空间已经有该变量的值，�
     xlabel(‘采样时刻’)
     ylabel(‘测量数据’)
 ![模拟传感器A的测量数据输出](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/2SensorA.png)
+
+
 模拟传感器A的测量数据输出
 
 MATLAB画图函数非常丰富，还可以对图设定适当的标注来提高效果图的表达方式和内容，增强可视化效果，比如横坐标、纵坐标的设置，用不同线型来区别不同变量的曲线，或在一张图上画出多个图进行对比分析。详情可查阅MATLAB相关书籍。
@@ -79,6 +81,8 @@ MATLAB画图函数非常丰富，还可以对图设定适当的标注来提高�
     ylabel(‘测量数据’) 
  
 ![模拟传感器B的测量数据输出](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/2SensorB.jpg)
+
+
 模拟传感器B的测量数据输出
 
 #### 例
@@ -100,6 +104,8 @@ MATLAB画图函数非常丰富，还可以对图设定适当的标注来提高�
     ylabel('measurement data')
 
 ![室内温度变化时模拟传感器A测量数据的输出](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/IndoorTemperatureChange.jpg)
+
+
 室内温度变化时模拟传感器A测量数据的输出
 
 ### 编程知识之二：MATLAB函数文件 
@@ -147,6 +153,8 @@ MATLAB语言除了主程序（如上述编写的这些小程序）之外，还�
     legend('目标运动的实际数据,'传感器测量数据')
 
 ![匀速直线运动模拟数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/UniformMotion.jpg) 
+
+
 匀速直线运动模拟数据
 
 #### 例 蛇型机动的正弦曲线模拟 
@@ -154,8 +162,10 @@ MATLAB语言除了主程序（如上述编写的这些小程序）之外，还�
 
 调用函数funtrackingsnake，设置相应的参数再进行适当标注，程序如下: a=2;omig=pi/4;R=3; t=0:0.1:10; [yreal,ym]=funtrackingsnake(a,omig,t,R); plot(t,yreal,t,ym) xlabel('t') ylabel('测量数据') legend('目标运动的实际数据,'传感器测量数据') 程序结果如图6.2所示。
 
-![蛇型机动的正弦曲线模拟数据}https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/snake.jpg()
+![蛇型机动的正弦曲线模拟数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/snake.jpg)
 
+
+蛇型机动的正弦曲线模拟数据
 #### 例 圆周运动模拟 
 下面这段程序没有使用函数，直接给出了产生圆周运动的程序，其中各个量的说明已经在程序中%后面做了标注。
 
@@ -189,8 +199,13 @@ MATLAB语言除了主程序（如上述编写的这些小程序）之外，还�
 
 ![目标在二维平面内圆周运动模拟数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/circle1.jpg)
 
+
+目标在二维平面内圆周运动模拟数据
+
 ![目标做圆周运动时的横、纵轴数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/circle2.jpg)
 
+
+目标做圆周运动时的横、纵轴数据
 #### 例 匀速直线运动+圆周运动目标的真实轨迹模拟 
 先请看下面的函数
 
@@ -220,7 +235,7 @@ MATLAB语言除了主程序（如上述编写的这些小程序）之外，还�
     x=[x x2]; xt=[xt tt]; x1=x2; www=[www ww]; 
     end 
     y=x+randn(size(x))*sqrt(R); 
-例6.4 中funtrackinglinecircle函数的输入量有四个：采样周期T，直线运动时间Tt，圆周运动时间Tz和测量噪声的方差R。
+funtrackinglinecircle函数的输入量有四个：采样周期T，直线运动时间Tt，圆周运动时间Tz和测量噪声的方差R。
 
 从函数中可看出，有些变量是已经设置好的，比如初始位置（0，-2000），还有线速度以及作直线运动时与水平方向产生的角度。程序先进行一段直线运动，运行到最后的点x2。结束for循环之后的下一个起点就是x2，设置了线速度以及运动的半径，给出圆心，又用for循环里的正、余弦进行圆周模拟运动。
 
@@ -237,10 +252,14 @@ MATLAB语言除了主程序（如上述编写的这些小程序）之外，还�
     xlabel('t');ylabel('纵轴模拟数据')
 
 ![目标先做直线运动、再做圆周运动时的二维平面运动](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/linecircle.png)
+
+
 目标在平面上运动的情形，可以看出目标从起点开始先做直线运动，然后向左上方转弯，走了一个圈。因为数据带有一定的测量噪声，所以图形看起来不太规整。
 
 ![目标先做直线运动、再做圆周运动时的横、纵轴数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/linecircle2.png)
 
+
+目标先做直线运动、再做圆周运动时的横、纵轴数据
 
 ## GPS跟踪系统的机动目标轨迹模拟 
 首先介绍一下GPS系统的数据采集特征，即传感器测量特征。GPS系统可以测量二维空间，并且该测量与横、纵坐标不相关。一般情况下，横、纵坐标都含有噪声，方差已知，因此模拟的测量数据需要包含横纵坐标，是2维数据。 
@@ -293,6 +312,9 @@ ginput函数输入1表示点左键，输出是点击点的横、纵坐标值。�
 
 ![GPS系统的机动目标轨迹模拟](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/GPS1.png)
 
+
+GPS系统的机动目标轨迹的模拟数据
 ![GPS系统的机动目标轨迹横、纵坐标轴数据模拟](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/GPS2.png)
 
 
+GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
