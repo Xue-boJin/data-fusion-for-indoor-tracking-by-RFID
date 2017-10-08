@@ -15,3 +15,16 @@
 ![Kalman滤波器](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/KalmanFiler.png)
 
 Kalman滤波器5个公式的关系
+### 2. 给你Matlab程序，来加深一下印象。
+    
+    function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p)
+    %This function is to calculate the estimation state by Kalman filter.
+    xe=A*xe;                     % 计算向前一步预测
+    P1=A*p*A'+Q;                 % 计算向前一步估计
+    K=p1*C'*inv(C*p1*C'+R);      % 计算估计增益
+    xe=xe+K*(z-C*xe);            % 计算估计结果
+    pk=(eye(size(p1))-l*C)*p1;   % 计算估计方差
+
+### 3. Kalman滤波器在使用时的一些小技巧。
+#### 稳态Kalman滤波器是啥？有什么用？
+#### 估计的方差说明什么？方差越大说明什么？
