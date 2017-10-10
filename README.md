@@ -1,3 +1,5 @@
+# 什么是跟踪？
+![跟踪是什么意思](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/tracking.jpg)
 # 第4次课 GPS仿真
 
 ## 跟踪方法之——几类跟踪系统中常用曲线的模拟 
