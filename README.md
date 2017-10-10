@@ -214,4 +214,7 @@ Kalman滤波器5个公式的关系
 如果你已经完成了问题11那么就从第2个问题开始吧。
 
 
-
+# 第三次课
+我们讲述四种不同的状态融合估计方法。
+##需要完成以下作业
+![第一次仿真作业](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/HomeWork1forFusion.png)
