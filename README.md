@@ -205,4 +205,4 @@ GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
 
 参考文献
 
-[1] 金学波，![Kalman滤波器理论与应用——基于MATLAB实现](http://www.ecsponline.com/goods.php?id=177510)，科学出版社，2016，第2章、第6章
+[1] 金学波，![Kalman滤波器理论与应用——基于MATLAB实现](http://www.ecsponline.com/goods.php?id=177510)，科学出版社，2016，第6章、第7章
