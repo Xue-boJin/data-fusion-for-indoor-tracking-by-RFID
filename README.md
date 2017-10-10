@@ -9,4 +9,4 @@ RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://g
 
 参考文献
 
-[1] 金学波，![Kalman滤波器理论与应用——基于MATLAB实现](http://www.ecsponline.com/goods.php?id=177510)，科学出版社，2016，第3章、第4章
+[1] 金学波，![Kalman滤波器理论与应用——基于MATLAB实现](http://www.ecsponline.com/goods.php?id=177510)，科学出版社，2016，第5章、第8章
