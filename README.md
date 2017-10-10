@@ -1,34 +1,10 @@
-# Kalman 滤波器
-本节讲Kaman滤波器的原理及应用，它是基于多传感器跟踪方法的基础。
+## RFID跟踪系统的机动目标轨迹模拟
+下面先来看RFID系统测量模型。
+![RFID测量模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/RFIDmodel.png)
+我们先来看右边第1个公式，这里描述的是携带标签的目标到阅读器的距离。但是由于传感器的测量噪声，使得阅读器获得的距离不是这个真实距离，而是加上一个测量噪声，也就是，公式2表示的。这个测量噪声的方差和距离有关，也就是说距离越长，所引入的测量噪声方差就会越大，越不准确，它的描述方法见公式3。
 
-它只有五个公式，但有人觉着它很难，因为这五个公式的关系挺复杂的。
+RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/RFID_creater_GUI_final.m)。
 
-我们这里不讲Kalman滤波器是怎么来的，它为什么在参数已知的条件下是最有的等，我们只讲怎么用，具体来讲，我们准备讲明白以下几点：
-
-1. 这五个公式啥关系？
-
-2. 给你Matlab程序，来加深一下印象。
-
-3. Kalman滤波器在使用时的一些小技巧。
-
-### 1. 这五个公式啥关系？
-![Kalman滤波器](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/KalmanFiler.png)
-
-Kalman滤波器5个公式的关系
-### 2. 给你Matlab程序，来加深一下印象。
-    
-     function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p)
-     %This function is to calculate the estimation state by Kalman filter.
-     xe=A*xe;                     % 计算向前一步预测估计
-     P1=A*p*A'+Q;                 % 计算向前一步估计方差
-     K=p1*C'*inv(C*p1*C'+R);      % 计算估计增益
-     xe=xe+K*(z-C*xe);            % 计算估计结果
-     pk=(eye(size(p1))-l*C)*p1;   % 计算估计方差
-
-### 3. Kalman滤波器在使用时的一些小技巧。
-#### 稳态Kalman滤波器是啥？有什么用？
-运行一下本文件夹中的C4_1.m这个程序，感受一下Kalman滤波器是怎样快速收敛到稳态的。
-#### 估计的方差说明什么？方差越大说明什么？
 
 
 参考文献
