@@ -207,7 +207,7 @@ GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
 利用Kalman滤波器获得准确估计需要准确的系统模型，例如，当系统做匀速运动或匀加速运动时，应该采用匀速（CV）模型和匀加速（CA）模型。但在实际应用中经常出现系统加速度非常数的情况，例如，飞机雷达对地面目标或海上目标进行跟踪时，在目标运动过程中驾驶员的人为动作或者控制指令随时会使目标出现转弯、闪避等动作，因此，目标不可能一直作匀速或者匀加速运动，这种很“随意”的运动称为“机动”。为了保证较好的轨迹跟踪结果，研究机动目标的运动模型是十分必要的。
 
 ![不同的模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/DifferentModels.png)
-我们要讲述的过程模型包括五种模型。
+我们要讲述的过程模型包括五种模型。想跟随我的思路，看一下这些模型的特点，点点下面这些蓝色字体，看看链接的程序吧，你会发现一点都不难。
 ## CV模型
 当目标做匀速运动的时候，![CV模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CVmodel.m)是最合适的。他满足牛顿定律的，速度，位移之间的关系，并且认为，加速度为零。当然真正的零很少见，因此，CV模型认为，加速度是零均值的白噪声，而且方差是已知的。
 
@@ -216,7 +216,7 @@ GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
 
 试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_1.m)，看看这两个模型有什么不同的效果吧!
 ### Singer模型
-1[Singer模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Singermodel.m)做了更多的假设，假设加速度是一个有色噪声。
+![Singer模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Singermodel.m)做了更多的假设，假设加速度是一个有色噪声。
 ### 当前统计模型
 ![当前统计模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Starmodel.m)假设就更多了，假设加速度的噪声满足某一个分布，而且还具有反馈的结构了。
 试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_7.m)，看一下利用这个模型跟踪GPS仿真轨迹的效果吧！
