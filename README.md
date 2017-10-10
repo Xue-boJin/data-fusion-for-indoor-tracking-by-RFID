@@ -1,4 +1,4 @@
-第6次课 RFID系统测量模型
+# 第6次课 RFID系统测量模型
 ## RFID的测量特性
 
 ![RFID测量模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/RFIDmodel.png)
