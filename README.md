@@ -22,7 +22,7 @@
 我们一起搭建一个基于MATLAB的仿真系统，界面就像这样的。。
 ![RFID仿真系统界面](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/RFIDTrackingSystem.png)
 
-##  数据源的误差
+#  数据源的误差
 接下来我们来谈一下传感器获得的数据源的问题。我们知道我们必须要通过一定的方式来采集多源信息融合。我们这门课程所研究的信息主要是来自于传感器，因此这一节我们先首先来讨论一下关于传感器的测量问题。
 
 首先要说明的是传感器测量会有很大的不确定性，也就是说我们通过传感器获得的数据和真实的数据往往是有很大的偏差的。
@@ -41,3 +41,6 @@
 
 对于测量噪声来讲，因为这是一个统计随机过程的统计量，所以说我们不能够把它去掉，但是我们需要知道这个噪声的统计特性，比如说它是否是高斯白噪声以及它的方差等等，利用这些信息在融合过程当中来考虑这些测量数据的不准确性，以获得更准确的融合结果。
 
+## 练习
+利用MATLAB实现以下问题。
+![课堂练习——获得模拟的测量数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/ClassWork1forKalmanFilter.png)
