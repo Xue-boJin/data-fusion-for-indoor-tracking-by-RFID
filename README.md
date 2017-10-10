@@ -1,4 +1,4 @@
-# 信息融合技术
+# 第一次课的内容
 开始啦！！ 
 ## 什么是信息融合
 从广义上讲，多源信息融合无时不刻地存在于我们人类的生活、工作和学习当中，在战争中更是如此。战场上，指挥官都要融合各种各样的信息才能获得一场战争的胜利，从古代的战争到现在的战争都是如此。
@@ -174,3 +174,44 @@ MATLAB语言除了主程序（如上述编写的这些小程序）之外，还�
 ## 练习
 利用MATLAB实现以下问题。
 ![课堂练习——获得模拟的测量数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/ClassWork1forKalmanFilter.png)
+
+# 第二次课的主要内容
+## Kalman 滤波器
+本节讲Kaman滤波器的原理及应用，它是基于多传感器跟踪方法的基础。
+
+它只有五个公式，但有人觉着它很难，因为这五个公式的关系挺复杂的。
+
+我们这里不讲Kalman滤波器是怎么来的，它为什么在参数已知的条件下是最有的等，我们只讲怎么用，具体来讲，我们准备讲明白以下几点：
+
+1. 这五个公式啥关系？
+
+2. 给你Matlab程序，来加深一下印象。
+
+3. Kalman滤波器在使用时的一些小技巧。
+
+### 1. 这五个公式啥关系？
+![Kalman滤波器](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/KalmanFiler.png)
+
+Kalman滤波器5个公式的关系
+### 2. 给你Matlab程序，来加深一下印象。
+    
+     function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p)
+     %This function is to calculate the estimation state by Kalman filter.
+     xe=A*xe;                     % 计算向前一步预测估计
+     P1=A*p*A'+Q;                 % 计算向前一步估计方差
+     K=p1*C'*inv(C*p1*C'+R);      % 计算估计增益
+     xe=xe+K*(z-C*xe);            % 计算估计结果
+     pk=(eye(size(p1))-l*C)*p1;   % 计算估计方差
+
+### 3. Kalman滤波器在使用时的一些小技巧。
+#### 稳态Kalman滤波器是啥？有什么用？
+运行一下本文件夹中的C4_1.m这个程序，感受一下Kalman滤波器是怎样快速收敛到稳态的。
+#### 估计的方差说明什么？方差越大说明什么？
+
+## 练习
+利用MATLAB实现以下问题。
+![kalman滤波器](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/CouseWork2forKalman.png)
+如果你已经完成了问题11那么就从第2个问题开始吧。
+
+
+
