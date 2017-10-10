@@ -57,7 +57,7 @@
 
 1. 这五个公式啥关系？
 
-2. 给你Matlab程序，来加深一下印象。
+2. 给你![Matlab程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/kalmanfun.m)，来加深一下印象。
 
 3. Kalman滤波器在使用时的一些小技巧。
 
@@ -77,8 +77,9 @@ Kalman滤波器5个公式的关系
 
 ### 3. Kalman滤波器在使用时的一些小技巧。
 #### 稳态Kalman滤波器是啥？有什么用？
-运行一下本文件夹中的C4_1.m这个程序，感受一下Kalman滤波器是怎样快速收敛到稳态的。
-#### 估计的方差说明什么？方差越大说明什么？
+运行一下本文件夹中的![这个程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/C4_1.m)，感受一下Kalman滤波器是怎样快速收敛到稳态的。别忘了还需要下载它所需的![函数](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/steadycov.m)!!
+
+ 分析一下程序运行结果，说说估计的方差说明什么？方差越大说明什么？
 
 ### 练习
 利用MATLAB实现以下问题。
