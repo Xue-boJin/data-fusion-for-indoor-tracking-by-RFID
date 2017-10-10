@@ -201,6 +201,8 @@ GPS系统的机动目标轨迹的模拟数据
 
 GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
 
+你可以下载![GPS仿真数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C6_5.m)这个程序，利用你的鼠标“点”出你的运行轨迹吧！
+
 # 第5次课 过程模型
 ![不同的模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/DifferentModels.png)
 我们要讲述的过程模型包括五种模型。
