@@ -219,3 +219,7 @@ Kalman滤波器5个公式的关系
 ### 作业
 需要在前两个问题的基础上，完成以下作业的第3题。
 ![第一次仿真作业](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/HomeWork1forFusion.png)
+
+## 参考文献
+
+[1] 金学波，![Kalman滤波器理论与应用——基于MATLAB实现](http://www.ecsponline.com/goods.php?id=177510)，科学出版社，2016，第2章、第4章
