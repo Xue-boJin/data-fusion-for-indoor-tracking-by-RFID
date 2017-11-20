@@ -67,7 +67,7 @@
 Kalman滤波器5个公式的关系
 ### 2. 给你Matlab程序，来加深一下印象。
     
-     function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p) %This function is to calculate the estimation state by Kalman filter.
+     function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p) 
      xe=A*xe;                     % 计算向前一步预测估计
      P1=A*p*A'+Q;                 % 计算向前一步估计方差
      K=p1*C'*inv(C*p1*C'+R);      % 计算估计增益
