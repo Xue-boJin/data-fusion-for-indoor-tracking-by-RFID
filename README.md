@@ -68,11 +68,11 @@ Kalman滤波器5个公式的关系
 ### 2. 给你Matlab程序，来加深一下印象。
     
      function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p) 
-     xe=A*xe;                     % 计算向前一步预测估计
-     P1=A*p*A'+Q;                 % 计算向前一步估计方差
-     K=p1*C'*inv(C*p1*C'+R);      % 计算估计增益
-     xe=xe+K*(z-C*xe);            % 计算估计结果
-     pk=(eye(size(p1))-l*C)*p1;   % 计算估计方差
+     xe=A*xe;                     
+     P1=A*p*A'+Q;                 
+     K=p1*C'*inv(C*p1*C'+R);      
+     xe=xe+K*(z-C*xe);            
+     pk=(eye(size(p1))-l*C)*p1;   
 
 ### 3. Kalman滤波器在使用时的一些小技巧。
 #### 稳态Kalman滤波器是啥？有什么用？
