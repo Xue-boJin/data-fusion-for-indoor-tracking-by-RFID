@@ -66,6 +66,7 @@
 ### 1. 这五个公式啥关系？
 ![Kalman滤波器](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/KalmanFiler.png)
 
+
 Kalman滤波器5个公式的关系
 ### 2. 给你Matlab程序，来加深一下印象。
     
@@ -90,6 +91,9 @@ Kalman滤波器5个公式的关系
 
 # 第三次课
 我们讲述四种不同的状态融合估计方法。
+![多传感器系统模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MultisensorSystem.png)
+![四种融合方法](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/FourFusionMethods.png)
+关于这四种融合方法的![简要描述]见(https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/9-%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88%E6%96%B9%E6%B3%95.pdf)，详细的扩展阅读参见![文档](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/9-%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88%E6%96%B9%E6%B3%95-%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB.pdf)。
 
 ### 作业
 需要在前两个问题的基础上，完成以下作业的第3题。
