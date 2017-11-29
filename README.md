@@ -111,7 +111,7 @@ Kalman滤波器5个公式的关系
 
 1.	我们使用了一个传感器对其进行测量，测量模型为
 
-<a href="http://www.codecogs.com/eqnedit.php?latex={{z}_{1}}(k)=x(k)&plus;{{v}_{1}}(k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?{{z}_{1}}(k)=x(k)&plus;{{v}_{1}}(k)" title="{{z}_{1}}(k)=x(k)+{{v}_{1}}(k)" /></a>
+<a href="http://www.codecogs.com/eqnedit.php?latex=\textcenter{{{z}_{1}}(k)=x(k)&plus;{{v}_{1}}(k)}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?{{z}_{1}}(k)=x(k)&plus;{{v}_{1}}(k)" title="{{z}_{1}}(k)=x(k)+{{v}_{1}}(k)" /></a>
 
 <a href="http://www.codecogs.com/eqnedit.php?latex={{v}_{1}}(k)\tilde{\&space;}(0,1)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?{{v}_{1}}(k)\tilde{\&space;}(0,1)" title="{{v}_{1}}(k)\tilde{\ }(0,1)" /></a>
 
@@ -131,10 +131,13 @@ Kalman滤波器5个公式的关系
 
 使用四种融合方法得到状态估计，利用MATLAB程序实现，给出结果图和程序，并进行适当的说明。
 
-第一种：集中式I， 
-第二种：集中式II， 
-第三种：track to track 融合方法， 
-第四种：分布式最优算法，
+第一种：集中式I
+
+第二种：集中式II
+
+第三种：track to track 融合方法
+
+第四种：分布式最优算法
 
 注：计入大作业成绩，请同学们认真对待。
 
