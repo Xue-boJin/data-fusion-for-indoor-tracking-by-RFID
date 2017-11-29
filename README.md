@@ -104,16 +104,31 @@ Kalman滤波器5个公式的关系
 
 ![第一次仿真作业](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/HomeworkFusion.png)
 假设有一个量满足如下游走模型
+<a href="http://www.codecogs.com/eqnedit.php?latex=\x(k&plus;1)=0.7x(k)&plus;w(k)&space;w(k)\tilde{\&space;}(0,1)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\x(k&plus;1)=0.7x(k)&plus;w(k)&space;w(k)\tilde{\&space;}(0,1)" title="\x(k+1)=0.7x(k)+w(k) w(k)\tilde{\ }(0,1)" /></a>
 
-<a href="http://www.codecogs.com/eqnedit.php?latex=\x(k&plus;1)=0.7x(k)&plus;w(k)\&space;\w(k)\tilde{\&space;}(0,1)\" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\x(k&plus;1)=0.7x(k)&plus;w(k)\&space;\w(k)\tilde{\&space;}(0,1)\" title="\x(k+1)=0.7x(k)+w(k)\ \w(k)\tilde{\ }(0,1)\" /></a>
 1.	我们使用了一个传感器对其进行测量，测量模型为
-\[{{z}_{1}}(k)=x(k)+{{v}_{1}}(k)\]
-\[{{v}_{1}}(k)\tilde{\ }(0,1)\]
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=\[{{z}_{1}}(k)=x(k)&plus;{{v}_{1}}(k)\]&space;\[{{v}_{1}}(k)\tilde{\&space;}(0,1)\]" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\[{{z}_{1}}(k)=x(k)&plus;{{v}_{1}}(k)\]&space;\[{{v}_{1}}(k)\tilde{\&space;}(0,1)\]" title="\[{{z}_{1}}(k)=x(k)+{{v}_{1}}(k)\] \[{{v}_{1}}(k)\tilde{\ }(0,1)\]" /></a>
 编写程序，模拟传感器获得的测量数据。
-2.	编写MATLAB程序，利用Kalman滤波器估计状态量\[\hat{x}(k)\]。
+
+2.	编写MATLAB程序，利用Kalman滤波器估计状态量<a href="http://www.codecogs.com/eqnedit.php?latex=\hat{x}(k)" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\hat{x}(k)" title="\hat{x}(k)" /></a>。
+
 3.	假设我们在某一地点又安置了一个传感器，传感器的测量模型为
-\[{{z}_{2}}(k)=3x(k)+{{v}_{2}}(k)\]
-\[{{v}_{2}}(k)\tilde{\ }(0,3)\]
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=\[{{z}_{2}}(k)=3x(k)&plus;{{v}_{2}}(k)\]&space;\[{{v}_{2}}(k)\tilde{\&space;}(0,3)\]" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\[{{z}_{2}}(k)=3x(k)&plus;{{v}_{2}}(k)\]&space;\[{{v}_{2}}(k)\tilde{\&space;}(0,3)\]" title="\[{{z}_{2}}(k)=3x(k)+{{v}_{2}}(k)\] \[{{v}_{2}}(k)\tilde{\ }(0,3)\]" /></a>
+
+设计融合方法，使用两个传感器的数据得到状态估计，分析其估计性能与前面单传感器的差别。
+
+上交文档要求：
+
+使用四种融合方法得到状态估计，利用MATLAB程序实现，给出结果图和程序，并进行适当的说明。
+
+第一种：集中式I， 
+第二种：集中式II， 
+第三种：track to track 融合方法， 
+第四种：分布式最优算法，
+
+注：计入大作业成绩，请同学们认真对待。
 
 ## 参考文献
 
