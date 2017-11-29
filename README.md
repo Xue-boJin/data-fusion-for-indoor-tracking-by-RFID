@@ -3,7 +3,7 @@
 课程网站 [data fusion on GitHub](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/edit/master/README.md) 包含了这门课程的所有信息。
 
 ## 课程内容
-   本课程共分为三大部分。它们的关系见图![课程内容结构关系](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/StructureofCourse.png)
+   本课程共分为三大部分。它们的关系见下图![课程内容结构关系](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/StructureofCourse.png)
    
 课程主要包括理论、方法及实现系统等内容。
 
