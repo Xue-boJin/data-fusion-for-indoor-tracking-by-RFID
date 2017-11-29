@@ -1,6 +1,7 @@
 
 # 第一次课的内容
 
+
 开始啦！！ 
 ## 什么是信息融合
 从广义上讲，多源信息融合无时不刻地存在于我们人类的生活、工作和学习当中，在战争中更是如此。战场上，指挥官都要融合各种各样的信息才能获得一场战争的胜利，从古代的战争到现在的战争都是如此。
@@ -102,6 +103,17 @@ Kalman滤波器5个公式的关系
 需要在前两个问题的基础上，完成以下作业的第3题。
 
 ![第一次仿真作业](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/HomeworkFusion.png)
+假设有一个量满足如下游走模型
+
+<a href="http://www.codecogs.com/eqnedit.php?latex=\x(k&plus;1)=0.7x(k)&plus;w(k)\&space;\w(k)\tilde{\&space;}(0,1)\" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\x(k&plus;1)=0.7x(k)&plus;w(k)\&space;\w(k)\tilde{\&space;}(0,1)\" title="\x(k+1)=0.7x(k)+w(k)\ \w(k)\tilde{\ }(0,1)\" /></a>
+1.	我们使用了一个传感器对其进行测量，测量模型为
+\[{{z}_{1}}(k)=x(k)+{{v}_{1}}(k)\]
+\[{{v}_{1}}(k)\tilde{\ }(0,1)\]
+编写程序，模拟传感器获得的测量数据。
+2.	编写MATLAB程序，利用Kalman滤波器估计状态量\[\hat{x}(k)\]。
+3.	假设我们在某一地点又安置了一个传感器，传感器的测量模型为
+\[{{z}_{2}}(k)=3x(k)+{{v}_{2}}(k)\]
+\[{{v}_{2}}(k)\tilde{\ }(0,3)\]
 
 ## 参考文献
 
