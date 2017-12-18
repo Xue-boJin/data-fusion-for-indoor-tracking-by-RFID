@@ -1,6 +1,28 @@
 # 什么是跟踪？
 ![跟踪是什么意思](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/tracking.jpg)
-# 第4次课 GPS仿真
+# 第4次课 过程模型
+利用Kalman滤波器获得准确估计需要准确的系统模型，例如，当系统做匀速运动或匀加速运动时，应该采用匀速（CV）模型和匀加速（CA）模型。但在实际应用中经常出现系统加速度非常数的情况，例如，飞机雷达对地面目标或海上目标进行跟踪时，在目标运动过程中驾驶员的人为动作或者控制指令随时会使目标出现转弯、闪避等动作，因此，目标不可能一直作匀速或者匀加速运动，这种很“随意”的运动称为“机动”。为了保证较好的轨迹跟踪结果，研究机动目标的运动模型是十分必要的。
+
+![不同的模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/DifferentModels.png)
+我们要讲述的过程模型包括五种模型。想跟随我的思路，看一下这些模型的特点，点点下面这些蓝色字体，看看链接的程序吧，你会发现一点都不难。
+## CV模型
+当目标做匀速运动的时候，![CV模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CVmodel.m)是最合适的。它满足牛顿定律的速度，位移之间的关系，并且认为加速度为零。当然真正的零很少见，因此，CV模型认为，加速度是零均值的白噪声，而且方差是已知的。
+
+## CA模型
+![CA模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CAmodel.m)认为，加速度的导数为零。也就是，加速度为一个恒定值，不变化。当然，要求加速度不变化的条件太苛刻，所以，CA模型认为，加速度的导数为零均值白噪声的随机过程。
+
+试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_1.m)，看看这两个模型有什么不同的效果吧!
+### Singer模型
+![Singer模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Singermodel.m)做了更多的假设，假设加速度是一个有色噪声。
+### 当前统计模型
+![当前统计模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Starmodel.m)假设就更多了，假设加速度的噪声满足某一个分布，而且还具有反馈的结构了。
+试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_7.m)，看一下利用这个模型跟踪GPS仿真轨迹的效果吧！
+### 自适应模型
+![自适应模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/myStarmodel.m)这个更绝，认为加速度满足一个未知的随机分布，可以根据估计状态进行统计得到它的规律。因此它的实用性更强，但是也最复杂。
+再试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_9.m)，别忘了下载它的![子函数](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/StartrackingModel.m)哦！
+
+这些函数的具体应用请参考下边列出的书籍第七章。
+# 第5次课 GPS轨迹仿真
 为什么要进行仿真呢？主要目的是想让你熟悉目标运动的曲线是什么样子的。
 ## 跟踪方法之——几类跟踪系统中常用曲线的模拟 
 本节给出几种常用的跟踪目标轨迹数据，包括目标做匀速直线运动、目标做蛇形机动、圆周运动、先做匀速直线运动再作圆周运动，以及在二维平面内做任意方向机动的模拟轨迹数据。本书不仅给出目标做各种运动的测量数据，还给出相应的程序，供读者使用。有的程序调用了函数，有的程序没有，并没有统一的格式，给出这些程序的另一个目的在于让读者熟悉这些MATLAB程序，方便读者编制自己的测量数据模拟程序。 
@@ -203,28 +225,7 @@ GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
 
 你可以下载![GPS仿真数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C6_5.m)这个程序，利用你的鼠标“点”出你的运行轨迹吧！
 
-# 第5次课 过程模型
-利用Kalman滤波器获得准确估计需要准确的系统模型，例如，当系统做匀速运动或匀加速运动时，应该采用匀速（CV）模型和匀加速（CA）模型。但在实际应用中经常出现系统加速度非常数的情况，例如，飞机雷达对地面目标或海上目标进行跟踪时，在目标运动过程中驾驶员的人为动作或者控制指令随时会使目标出现转弯、闪避等动作，因此，目标不可能一直作匀速或者匀加速运动，这种很“随意”的运动称为“机动”。为了保证较好的轨迹跟踪结果，研究机动目标的运动模型是十分必要的。
 
-![不同的模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/DifferentModels.png)
-我们要讲述的过程模型包括五种模型。想跟随我的思路，看一下这些模型的特点，点点下面这些蓝色字体，看看链接的程序吧，你会发现一点都不难。
-## CV模型
-当目标做匀速运动的时候，![CV模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CVmodel.m)是最合适的。它满足牛顿定律的速度，位移之间的关系，并且认为加速度为零。当然真正的零很少见，因此，CV模型认为，加速度是零均值的白噪声，而且方差是已知的。
-
-## CA模型
-![CA模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CAmodel.m)认为，加速度的导数为零。也就是，加速度为一个恒定值，不变化。当然，要求加速度不变化的条件太苛刻，所以，CA模型认为，加速度的导数为零均值白噪声的随机过程。
-
-试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_1.m)，看看这两个模型有什么不同的效果吧!
-### Singer模型
-![Singer模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Singermodel.m)做了更多的假设，假设加速度是一个有色噪声。
-### 当前统计模型
-![当前统计模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/Starmodel.m)假设就更多了，假设加速度的噪声满足某一个分布，而且还具有反馈的结构了。
-试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_7.m)，看一下利用这个模型跟踪GPS仿真轨迹的效果吧！
-### 自适应模型
-![自适应模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/myStarmodel.m)这个更绝，认为加速度满足一个未知的随机分布，可以根据估计状态进行统计得到它的规律。因此它的实用性更强，但是也最复杂。
-再试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_9.m)，别忘了下载它的![子函数](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/StartrackingModel.m)哦！
-
-这些函数的具体应用请参考下边列出的书籍第七章。
 
 ## 作业
 1. 模拟出GPS系统模拟数据，并且分别模拟出一个传感器和两个传感器的测量数据；
