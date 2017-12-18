@@ -22,7 +22,14 @@
 再试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_9.m)，别忘了下载它的![子函数](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/StartrackingModel.m)哦！
 
 这些函数的具体应用请参考下边列出的书籍第七章。
-# 第5次课 GPS轨迹仿真
+# 第5次课 RFID系统测量模型
+## RFID的测量特性
+
+![RFID测量模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/RFIDmodel.png)
+我们先来看右边第1个公式，这里描述的是携带标签的目标到阅读器的距离。但是由于传感器的测量噪声，使得阅读器获得的距离不是这个真实距离，而是加上一个测量噪声，也就是，公式2表示的。这个测量噪声的方差和距离有关，也就是说距离越长，所引入的测量噪声方差就会越大，越不准确，它的描述方法见公式3。
+## RFID跟踪系统的机动目标轨迹模拟
+RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/RFID_creater_GUI_final.m)。
+# 第6次课 轨迹仿真
 为什么要进行仿真呢？主要目的是想让你熟悉目标运动的曲线是什么样子的。
 ## 跟踪方法之——几类跟踪系统中常用曲线的模拟 
 本节给出几种常用的跟踪目标轨迹数据，包括目标做匀速直线运动、目标做蛇形机动、圆周运动、先做匀速直线运动再作圆周运动，以及在二维平面内做任意方向机动的模拟轨迹数据。本书不仅给出目标做各种运动的测量数据，还给出相应的程序，供读者使用。有的程序调用了函数，有的程序没有，并没有统一的格式，给出这些程序的另一个目的在于让读者熟悉这些MATLAB程序，方便读者编制自己的测量数据模拟程序。 
