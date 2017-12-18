@@ -209,10 +209,10 @@ GPS系统的机动目标轨迹横、纵坐标轴的模拟数据
 ![不同的模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/DifferentModels.png)
 我们要讲述的过程模型包括五种模型。想跟随我的思路，看一下这些模型的特点，点点下面这些蓝色字体，看看链接的程序吧，你会发现一点都不难。
 ## CV模型
-当目标做匀速运动的时候，![CV模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CVmodel.m)是最合适的。他满足牛顿定律的，速度，位移之间的关系，并且认为，加速度为零。当然真正的零很少见，因此，CV模型认为，加速度是零均值的白噪声，而且方差是已知的。
+当目标做匀速运动的时候，![CV模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CVmodel.m)是最合适的。它满足牛顿定律的速度，位移之间的关系，并且认为加速度为零。当然真正的零很少见，因此，CV模型认为，加速度是零均值的白噪声，而且方差是已知的。
 
 ## CA模型
-![CA模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CAmodel.m)认为，加速度的导数为零。也就是，加速度为一个恒定值，不变化。当然，要求加速度。不变化的条件太苛刻，所以，CA模型认为，加速度的导数为零均值白噪声的随机过程。
+![CA模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/CAmodel.m)认为，加速度的导数为零。也就是，加速度为一个恒定值，不变化。当然，要求加速度不变化的条件太苛刻，所以，CA模型认为，加速度的导数为零均值白噪声的随机过程。
 
 试一下这个![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/C7_1.m)，看看这两个模型有什么不同的效果吧!
 ### Singer模型
