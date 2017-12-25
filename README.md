@@ -129,7 +129,7 @@ Kalman滤波器5个公式的关系
 
 上交文档要求：
 
-使用四种融合方法得到状态估计，利用MATLAB程序实现，给出结果图和程序，并进行适当的说明。
+利用MATLAB程序实现这四种算法，给出结果图和程序，并进行适当的说明。
 
 第一种：集中式I
 
@@ -140,7 +140,16 @@ Kalman滤波器5个公式的关系
 第四种：分布式最优算法
 
 注：计入大作业成绩，请同学们认真对待。
+###参考答案
+用于产生模拟数据的程序见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/mydata.m)， 获得了![数据]()。
+第一种：集中式I的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MIfunction.m)。
 
+第二种：集中式II的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MIIfunction.m)。
+
+第三种：track to track 融合方法的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/TrackToTrackfunction.m)。
+
+第四种：分布式最优算法的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/DistributedFusionfunction.m)。
+利用MATLAB程序实现这四种算法并进行比较，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/showall.m)。
 ## 参考文献
 
 [1] 金学波，![Kalman滤波器理论与应用——基于MATLAB实现](http://www.ecsponline.com/goods.php?id=177510)，科学出版社，2016，第2章、第4章
