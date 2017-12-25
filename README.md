@@ -6,7 +6,15 @@
 ## RFID跟踪系统的机动目标轨迹模拟
 RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/RFID_creater_GUI_final.m)。
 
+# 第6次课 非线性估计
 
+## EKF
+
+EKF使用泰勒级数展开的方法，将非线性关系变成了线性关系。当然啦，只取了1阶变换，因此，可以知道，如果非线性特别严重的话，1阶近似就不太好啦！！
+
+![EKF算法]()
+
+##UKF
 
 参考文献
 
