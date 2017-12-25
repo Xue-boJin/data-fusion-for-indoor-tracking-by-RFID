@@ -6,7 +6,7 @@
 ## RFID跟踪系统的机动目标轨迹模拟
 RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/RFID_creater_GUI_final.m)。
 
-# 第6次课 非线性估计
+# 第7次课 非线性估计
 
 ## EKF
 
@@ -15,8 +15,13 @@ EKF使用泰勒级数展开的方法，将非线性关系变成了线性关系�
 ![EKF算法](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/EKFpng.png)
 
 ##UKF
-UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“爆炸”成若干个点，就是这样的：![不敏变换](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF0.png)。![不敏变换的示意图](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKFFigure.png)
+
+UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“爆炸”成若干个点，就是这样的：![不敏变换](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF0.png)。
+
+![不敏变换的示意图](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKFFigure.png)
+
 然后每一步都是这多个点进行估计，再计算方差，这可是复杂多了！！
+
 ![UKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF1.png)
 ![UKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF2.png)
 
