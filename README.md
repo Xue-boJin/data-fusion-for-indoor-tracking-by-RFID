@@ -14,11 +14,11 @@ EKF使用泰勒级数展开的方法，将非线性关系变成了线性关系�
 
 ![EKF算法](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/EKFpng.png)
 
-##UKF
+## UKF
 
 UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“爆炸”成若干个点，就是这样的：![不敏变换](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF0.png)。
 
-![不敏变换的示意图](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKFFigure.png)
+请看下面的不敏变换后的示意图 ![不敏变换的示意图](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKFFigure.png)
 
 然后每一步都是这多个点进行估计，再计算方差，这可是复杂多了！！
 
