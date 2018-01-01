@@ -47,6 +47,10 @@ UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“�
 
 ## 仿真研究
 
+大家需要下载1[仿真程序C8_1.m](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/C8_1.m)，运行之后可以看到一下结果。
+
+这个程序需要下载 ![数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/RFIDm5.mat)，当然还需要上面提到的EKF或UKF函数，所以需要下载文件夹lesson3下的所有程序。
+
 ### EKF
 
 横、纵轴的估计协方差分别为49.2714 、38.524。
