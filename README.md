@@ -31,9 +31,9 @@ UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“�
 
 ![EKF跟踪算法](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/RFID%20EKF.png)
 
-为了更好的理解算法，我们来一起看一下![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/funDataDrivenModelYWwithEKF.m)吧！
+为了更好的理解算法，我们来一起看一下程序吧！
 
-这是一个函数 funDataDrivenModelYWwithEKF，还调用了一个![子函数myEKFadfun](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/myEKFadfun.m)。
+这是一个函数 ![程序funDataDrivenModelYWwithEKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/funDataDrivenModelYWwithEKF.m)，还调用了一个![子函数myEKFadfun](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/myEKFadfun.m)。
 
 ## 
 
