@@ -17,14 +17,25 @@ UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“�
 ![UKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF1.png)
 ![UKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF2.png)
 
+相关的程序我们在下一节“RFID室内跟踪系统”再看。
+
 # 第8次课 RFID室内跟踪系统
 ## 系统特点
 1. 采样时间是事件驱动式，时间间隔不等，也就是采样周期不再是T。
 2. 测量传感器的模型是非线性的，需要使用非线性估计方法。
 3. 目标的运动很复杂，不再满足恒速、恒加速等情况，所以需要使用能够描述复杂运动关系的运动模型。
 
-## 解决方案
+## 基于可变数量RFID阅读器的EKF跟踪方法
 
+在实际应用中，该系统包括预测、状态估计和参数估计三个部分。
+
+![EKF跟踪算法](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/RFID%20EKF.png)
+
+为了更好的理解算法，我们来一起看一下![程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/funDataDrivenModelYWwithEKF.m)吧！
+
+这是一个函数 funDataDrivenModelYWwithEKF，还调用了一个![子函数myEKFadfun](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/myEKFadfun.m)。
+
+## 
 
 参考文献
 
