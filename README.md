@@ -61,7 +61,9 @@
 ## 本部分导读
 1. Kalman滤波器适用于线性系统还是非线性系统？
 2. 系统模型包括哪两个？过程模型描述了哪些量的关系？测量模型描述了哪些量的关系？
-3. 
+3. 画出Kalman滤波器的流程图，包括初始值，以及预测和估计的递推环。
+4. 稳态估计有什么好处？如何求得稳态的Kalman估计的增益？
+5. 设<a href="http://www.codecogs.com/eqnedit.php?latex=\theta" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\theta" title="\theta" /></a>为待估计变量，已知该变量在实际应用中是一个恒值。设传感器的测量模型为<a href="http://www.codecogs.com/eqnedit.php?latex=y=2\theta&plus;v" target="_blank"><img src="http://latex.codecogs.com/gif.latex?y=2\theta&plus;v" title="y=2\theta+v" /></a>，请设计Kalman滤波器，得到估计<a href="http://www.codecogs.com/eqnedit.php?latex=\hat{\theta}" target="_blank"><img src="http://latex.codecogs.com/gif.latex?\hat{\theta}" title="\hat{\theta}" /></a>。
 ## Kalman 滤波器
 本节讲Kaman滤波器的原理及应用，它是基于多传感器跟踪方法的基础。
 
