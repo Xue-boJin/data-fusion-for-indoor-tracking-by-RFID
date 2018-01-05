@@ -1,4 +1,5 @@
 # 什么是跟踪？
+
 ## 本部分导读
 1. 每一个模型都适用于具有什么特征的运动？要求能够根据不同的运动特性进行合理选择。
 2. 每一个模型都需要设置哪些初始量？
@@ -11,7 +12,8 @@
 ![跟踪是什么意思](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/tracking.jpg)
 
 # 第4次课 过程模型
-
+## 本部分教程
+![机动目标动力学模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/%E7%AC%AC5%E7%AB%A0%20%E6%9C%BA%E5%8A%A8%E7%9B%AE%E6%A0%87%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E5%9E%8B.pdf)
 
 利用Kalman滤波器获得准确估计需要准确的系统模型，例如，当系统做匀速运动或匀加速运动时，应该采用匀速（CV）模型和匀加速（CA）模型。但在实际应用中经常出现系统加速度非常数的情况，例如，飞机雷达对地面目标或海上目标进行跟踪时，在目标运动过程中驾驶员的人为动作或者控制指令随时会使目标出现转弯、闪避等动作，因此，目标不可能一直作匀速或者匀加速运动，这种很“随意”的运动称为“机动”。为了保证较好的轨迹跟踪结果，研究机动目标的运动模型是十分必要的。
 
@@ -35,6 +37,7 @@
 
 这些函数的具体应用请参考下边列出的书籍第七章。
 # 第5次课 RFID系统测量模型
+![RFID测量模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/%E7%AC%AC6%E7%AB%A0%20RFID%E6%B5%8B%E9%87%8F%E6%A8%A1%E5%9E%8B.pdf)
 ## RFID的测量特性
 
 ![RFID测量模型](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/RFIDmodel.png)
@@ -43,6 +46,8 @@
 
 RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/RFID_creater_GUI_final.m)，我们还有一个可以保存产生数据简单的程序![RFIDmeasurementdata](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/RFIDmeasurementdata.m)。
 # 第6次课 轨迹仿真
+## 本部分教程
+![跟踪轨迹仿真](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson2/%E7%AC%AC4%E7%AB%A0%20%E8%B7%9F%E8%B8%AA%E8%BD%A8%E8%BF%B9%E4%BB%BF%E7%9C%9F.pdf)
 为什么要进行仿真呢？主要目的是想让你熟悉目标运动的曲线是什么样子的。
 ## 跟踪方法之——几类跟踪系统中常用曲线的模拟 
 本节给出几种常用的跟踪目标轨迹数据，包括目标做匀速直线运动、目标做蛇形机动、圆周运动、先做匀速直线运动再作圆周运动，以及在二维平面内做任意方向机动的模拟轨迹数据。本书不仅给出目标做各种运动的测量数据，还给出相应的程序，供读者使用。有的程序调用了函数，有的程序没有，并没有统一的格式，给出这些程序的另一个目的在于让读者熟悉这些MATLAB程序，方便读者编制自己的测量数据模拟程序。 
