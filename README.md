@@ -1,4 +1,6 @@
 # 第7次课 非线性估计
+## 本部分教程
+![第7章 非线性估计方法](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/nonlinear%20Kalman%20filter.pdf)
 ## 本部分导读
 1. 回顾泰勒级数展开式， 已知一个非线性函数，可以获得其中的第一项。
 2. 推导RFID系统的EKF估计方法。
@@ -22,11 +24,13 @@ UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“�
 ![UKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF1.png)
 ![UKF](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF2.png)
 
-请参见关于本部分内容的![简要介绍](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/7%20%E9%9D%9E%E7%BA%BF%E6%80%A7Kalman%E6%BB%A4%E6%B3%A2%E5%99%A8.pdf)及![扩展阅读](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/nonlinear%20Kalman%20filter.pdf)。
+请参见关于本部分内容的![简要介绍](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/7%20%E9%9D%9E%E7%BA%BF%E6%80%A7Kalman%E6%BB%A4%E6%B3%A2%E5%99%A8.pdf)。
 
 相关的程序我们在下一节“RFID室内跟踪系统”再看。
 
 # 第8次课 RFID室内跟踪系统
+## 本部分教程
+![第8章 RFID室内跟踪系统](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/8%20RFID%20%E8%B7%9F%E8%B8%AA%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB.pdf)
 ## 本部分导读
 1. RFID系统的室内跟踪系统有哪些特点？
 2. 为什么说RFID跟踪系统的采样时间间隔的采样周期是可变的？在跟踪方法的设计过程中，如何适应这种可变采样周期的估计？
@@ -77,7 +81,7 @@ UKF使用一种叫“不敏变换”（Sigma Transform）将非线性的点“�
 
 ![结果图](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/UKF%E4%BB%BF%E7%9C%9F%E7%BB%93%E6%9E%9C%E5%9B%BE.png)
 
-请参见关于本部分内容的![简要介绍](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/8%20RFID%E8%B7%9F%E8%B8%AA%E7%B3%BB%E7%BB%9F.pdf)及![扩展阅读](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/8%20RFID%20%E8%B7%9F%E8%B8%AA%E7%B3%BB%E7%BB%9F%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB.pdf)。
+请参见关于本部分内容的![简要介绍](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson3/8%20RFID%E8%B7%9F%E8%B8%AA%E7%B3%BB%E7%BB%9F.pdf)。
 
 参考文献
 
