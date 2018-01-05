@@ -1,5 +1,7 @@
 
 # 第一次课的内容
+## 本部分教程
+![第1章 信息融合的概念](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/%E7%AC%AC1%E7%AB%A0%20%E4%BF%A1%E6%81%AF%E8%9E%8D%E5%90%88%E7%9A%84%E6%A6%82%E5%BF%B5.pdf)
 ## 本部分导读
 1. 信息融合的基本特点是什么？
 2. 信息融合的方式有哪两类？请画图说明信息的流动关系？
@@ -58,6 +60,8 @@
 ![课堂练习——获得模拟的测量数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/resource/ClassWork1forKalmanFilter.png)
 
 # 第二次课的主要内容
+## 本部分教程
+![第2章 Kalman滤波器](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/%E7%AC%AC2%E7%AB%A0%20Kalman%E6%BB%A4%E6%B3%A2%E5%99%A8.pdf)
 ## 本部分导读
 1. Kalman滤波器适用于线性系统还是非线性系统？
 2. 系统模型包括哪两个？过程模型描述了哪些量的关系？测量模型描述了哪些量的关系？
@@ -111,6 +115,8 @@ Kalman滤波器5个公式的关系
 
 
 # 第三次课
+## 本部分教程
+![第3章 多传感器融合估计方法(https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/%E7%AC%AC3%E7%AB%A0%20%E5%A4%9A%E4%BC%A0%E6%84%9F%E5%99%A8%E8%9E%8D%E5%90%88%E4%BC%B0%E8%AE%A1%E6%96%B9%E6%B3%95.pdf)
 ## 本部分导读
 1. 多传感器系统的模型与单传感器有何区别？
 2. 四种融合方法中哪两种性能是一样的？
