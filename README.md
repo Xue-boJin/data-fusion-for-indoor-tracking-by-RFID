@@ -165,9 +165,9 @@ Kalman滤波器5个公式的关系
 
 利用MATLAB程序实现这四种算法，给出结果图和程序，并进行适当的说明。
 
-第一种：集中式I
+第一种：测量融合方法I
 
-第二种：集中式II
+第二种：测量融合方法II
 
 第三种：track to track 融合方法
 
@@ -180,9 +180,9 @@ Kalman滤波器5个公式的关系
 
 用于产生模拟数据的程序见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/mydata.m)， 获得了![数据](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/myfusiondata.mat)。
 
-第一种：集中式I的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MIfunction.m)。
+第一种：测量融合方法I的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MIfunction.m)。
 
-第二种：集中式II的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MIIfunction.m)。
+第二种：测量融合方法II的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/MIIfunction.m)。
 
 第三种：track to track 融合方法的函数，见![参考程序](https://github.com/Xue-boJin/data-fusion-for-indoor-tracking-by-RFID/blob/Lesson1/TrackToTrackfunction.m)。
 
