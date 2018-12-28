@@ -118,9 +118,9 @@ RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://g
     op=[0 0];%圆心 
     x=[];xt=[];www=[];ww=0; 
     for t=1:T:50 
-    ww=ww+w; 
-    x2=[cos(ww)r+op(1);sin(ww)r+op(2)]; 
-    x=[x x2]; xt=[xt t]; www=[www ww]; 
+         ww=ww+w; 
+         x2=[cos(ww)r+op(1);sin(ww)r+op(2)]; 
+         x=[x x2]; xt=[xt t]; www=[www ww]; 
     end 
     plot(x(1,:),x(2,:),'*') 
     xlabel('横轴模拟数据') 
@@ -141,32 +141,46 @@ RFID跟踪系统仿真平台见Matlab程序![RFID_creater_GUI_final.m](https://g
 ### 例 匀速直线运动+圆周运动目标的真实轨迹模拟 
 先请看下面的函数
 
-    function [xt,y]=funtrackinglinecircle(T,Tt,Tz,R) %T:采样周期 %Tt:直线运行时间 %Tz：圆周运行时间 %R：测量噪声方差
-    %本程序模拟匀速直线运动+圆周运动目标的真实轨迹 %功能描述： 
-    % 针对某机动目标运动的特点，假设某运动目标经历了两个航行阶段： 
-    % 初始匀速直线运动、匀速圆周转弯机动运动。将目标建立在二维坐标系中，初始位置为XXX，目标线速度为XXX; 
-    % 以XX角速度向斜上方运动，目标运行Tt秒后，作向心wv ms/s^2的匀加速圆周运动，速度的大小v保持不变。 
-    x0=[0 -2000]';%初始位置 
-    v=200;%速度 
+    function [x,y]=funtrackinglinecircle(T,Tt,Tz,R)
+    %T:采样周期
+    %Tt:直线运行时间
+    %Tz：圆周运行时间
+    %R：测量噪声方差
+    %本程序模拟匀速直线运动+圆周运动目标的真实轨迹
+    %运行描述：
+    % 针对某机动目标运动的特点，我们假设某运动目标经历了两个航行阶段：
+    % 初始匀速直线运动、匀速圆周转弯机动运动。将目标建立在二维坐标坐标系中，初始位置为XXX，目标线速度为XXX;
+    % 以XX度角向斜上方运动，目标运行41秒后，作向心wv ms/s^2的匀加速圆周运动，速度的大小v保持不变。
+    x0=[0 -2000]';%初始位置
+    v=200;%速度
     vj=pi/4;%与水平方向所成角度
-    x=[];xt=[]; 
-    for t=1:T:Tt 
-    x2=[sin(vj)*v+x1(1);cos(vj)*v+x1(2)]; 
-    x=[x x2]; xt=[xt t]; x1=x2; 
+
+    x1=x0;x=[];xt=[];
+    for t=1:T:Tt
+         x2=[sin(vj)*v+x1(1);cos(vj)*v+x1(2)];
+         x=[x x2];
+         xt=[xt t];
+         x1=x2;
     end
-    % % % 圆周运动 
-    x0=x2; 
-    v=200;%线速度 
-    r=2000;%半径 
-    w=v/r; 
-    op=[x0(1)-r x0(2)];%圆心 
-    x1=x0;www=[];ww=0; 
-    for tt=t:Tz+t 
-    ww=ww+w 
-    x2=[cos(ww)*r+op(1);sin(ww)*r+op(2)]; 
-    x=[x x2]; xt=[xt tt]; x1=x2; www=[www ww]; 
-    end 
-    y=x+randn(size(x))*sqrt(R); 
+
+    % % figure% 圆周运动
+    x0=x2;
+    v=200;%线速度
+    T=1;
+    r=2000;%半径
+    w=v/r;
+    op=[x0(1)-r x0(2)];%圆心
+    x1=x0;www=[];ww=0;
+    for tt=t:Tz+t
+         ww=ww+w;
+         x2=[cos(ww)*r+op(1);sin(ww)*r+op(2)];
+         x=[x x2];
+    xt=[xt tt];
+    x1=x2;
+    
+    end
+    y=x+randn(size(x))*sqrt(R);
+
 funtrackinglinecircle函数的输入量有四个：采样周期T，直线运动时间Tt，圆周运动时间Tz和测量噪声的方差R。
 
 从函数中可看出，有些变量是已经设置好的，比如初始位置（0，-2000），还有线速度以及作直线运动时与水平方向产生的角度。程序先进行一段直线运动，运行到最后的点x2。结束for循环之后的下一个起点就是x2，设置了线速度以及运动的半径，给出圆心，又用for循环里的正、余弦进行圆周模拟运动。
