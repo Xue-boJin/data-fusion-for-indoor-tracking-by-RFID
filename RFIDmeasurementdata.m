@@ -3,7 +3,7 @@ clc
 axis([0 100 0 100])
 hold on
 % Initially, the list of points is empty.
-%%%%%%%%%%%%%²úÉúreaderµÄµãÊı¼°Î»ÖÃ
+%%%%%%%%%%%%%äº§ç”Ÿreaderçš„ç‚¹æ•°åŠä½ç½®
 n = 0;
 % Loop, picking up the points.
 disp('Left mouse button picks points.')
@@ -15,7 +15,7 @@ while reader == 1
     n = n+1;
     readerxy(:,n) = [rxi;ryi];
 end
-%%%%%%%%%%²úÉúÄ¿±êµÄÕæÊµ¹ì¼£
+%%%%%%%%%%äº§ç”Ÿç›®æ ‡çš„çœŸå®è½¨è¿¹
 n=0;
 but = 1;
 while but == 1
@@ -32,8 +32,8 @@ xyss = spline(t,xy,tss);
 % figure
 % Plot the interpolated curve.
 plot(xyss(1,:),xyss(2,:),'--');
-%%%%%%%ÔÚÕæÊµ¹ì¼£ÉÏ¼ÓÈë²âÁ¿ÔëÉù
-%%%%%µÃµ½²âÁ¿Êı¾İ
+%%%%%%%åœ¨çœŸå®è½¨è¿¹ä¸ŠåŠ å…¥æµ‹é‡å™ªå£°
+%%%%%å¾—åˆ°æµ‹é‡æ•°æ®
 ap=4;r=3;
 for i=1:length(readerxy(1,:))
     for j=1:length(xyss(1,:))
@@ -59,7 +59,7 @@ for ii=1:length(tss);
     end
 end
 
-% save E:\jxb\MFile\RFIDtracking\RFIDm1 readerxy xys ts d dm ap r
+ save RFIDmX readerxy xys ts d dm ap r
 % save E:\jxb\MFile\RFIDtracking\RFIDm2 readerxy xys ts d dm ap r
 % save E:\jxb\MFile\RFIDtracking\RFIDm10 readerxy xys ts d dm ap r
 % % subplot(2,1,1),plot(ts,xys(1,:))
