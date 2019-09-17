@@ -4,4 +4,4 @@ function [xe,pk,p1]=kalmanfun(A,C,Q,R,xe,z,p)
    p1=A*p*A'+Q;
    K=p1*C'*inv(C*p1*C'+R);
    xe=xe+K*(z-C*xe);
-   pk=(eye(size(p1))-l*C)*p1;
+   pk=(eye(size(p1))-K*C)*p1;
