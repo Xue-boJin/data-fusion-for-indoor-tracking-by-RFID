@@ -100,7 +100,7 @@ Kalman滤波器5个公式的关系
     P1=A*p*A'+Q;               
     K=p1*C'*inv(C*p1*C'+R);     
     xe=xe+K*(z-C*xe);            
-    pk=(eye(size(p1))-l*C)*p1;   
+    pk=(eye(size(p1))-K*C)*p1;   
 
 ### 3. Kalman滤波器在使用时的一些小技巧。
 #### 稳态Kalman滤波器是啥？有什么用？
