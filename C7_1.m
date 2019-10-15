@@ -24,4 +24,4 @@ for i=1:length(y(2,:))
 xx2=[xx2 xe];
 end
 plot(x(1,:),x(2,:),'*');hold on,plot(C*xx1,C*xx2);hold off
-figure
+%figure
