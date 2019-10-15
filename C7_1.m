@@ -13,13 +13,13 @@ qq=1;%%%此值的选择对性能影响很大，可以去不同的值，如取0.1
 %使用Kalman进行滤波,对于圆形机动，需要横纵轴分别估计
 %%%估计横轴
 xe=zeros(length(Q),1);p=1000*eye(size(A));xx1=[];
-for i=1:length(t)
+for i=1:length(y(1,:))
 [xe,p]=kalmanfun(A,C,Q,R,xe,y(1,i),p);
 xx1=[xx1 xe];
 end
 %%%%估计纵轴
 xe=zeros(length(Q),1);p=1000*eye(size(A));xx2=[];
-for i=1:length(t)
+for i=1:length(y(2,:))
 [xe,p]=kalmanfun(A,C,Q,R,xe,y(2,i),p)
 xx2=[xx2 xe];
 end
