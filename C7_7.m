@@ -3,28 +3,27 @@ clear
 summ=0;N=10;
 for n=1:N
 
-%%读入mytarget 数据文件
+%%璇诲叆mytarget 鏁版嵁鏂囦欢
 load mytarget 
 T=0.1;
 R=25;
  
 y=xys+sqrt(R)*randn(size(xys));
 qqa=[];
-%%%%%%%%%%%选择模型参数
+%%%%%%%%%%%閫夋嫨妯″瀷鍙傛暟
  a=1/20;
  xamax=30;
  C=[1 0 0];
-%%%估计横轴
+%%%浼拌妯酱
 xe=zeros(3,1);p=10*eye(3);xx1=[];
 for i=1:length(y(1,:))
 xa=xe(3);
 [A1,A,Q,U,qa]=Starmodel(T,xa,a,xamax);
 [xe,p]=kalmanadfun(A1,A,U,C,Q,R,xe,y(1,i),p);
-xa=xe(3);
 xx1=[xx1 xe];
 qqa=[qqa qa];
 end
-%%%%估计纵轴
+%%%%浼拌绾佃酱
 xe=zeros(3,1);p=10*eye(3);xx2=[];
 for i=1:length(y(2,:))
 xa=xe(3);
