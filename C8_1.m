@@ -2,14 +2,14 @@
 clc
 clear
 summ=0;
-N=10;  %%%%¼ÆËã10´Î£¬ÔÚÇóÆ½¾ù£¬ÐèÒªÔÚGUIÉÏÉèÖÃ¸ö¿ÉÒÔÉèÖÃÊý×ÖµÄÎÄ°å¿ò£¬ÔÙ°ÑÕâ¸öÊý¾ÝÌá³öÀ´Ó¦ÓÃµ½³ÌÐòÖÐ
-covvv=[];   %%%¹À¼Æ·½²î
+N=10;  %%%%è®¡ç®—10æ¬¡ï¼Œåœ¨æ±‚å¹³å‡ï¼Œéœ€è¦åœ¨GUIä¸Šè®¾ç½®ä¸ªå¯ä»¥è®¾ç½®æ•°å­—çš„æ–‡æ¿æ¡†ï¼Œå†æŠŠè¿™ä¸ªæ•°æ®æå‡ºæ¥åº”ç”¨åˆ°ç¨‹åºä¸­
+covvv=[];   %%%ä¼°è®¡æ–¹å·®
 for n=1:N
-%%%%%²»¹æÔò²ÉÑù¸ú×Ù¿ªÊ¼
-%%%%%¶ÁÈ¡Êý¾Ý
+%%%%%ä¸è§„åˆ™é‡‡æ ·è·Ÿè¸ªå¼€å§‹
+%%%%%è¯»å–æ•°æ®
 load RFIDm5 
-TT=[];TTT=[];  %%%Îª¼ÇÂ¼ÏÂÃæ¼ÆËãµÃ³öµÄÁ¿£¬ÐèÒªÏÈÉèÖÃÁ½¸ö¿Õ±äÁ¿
-%%%%%%%%%%%%%¼ÆËãµÃµ½²»¹æÔò²ÉÑùÊý¾ÝµÄÖÜÆÚ
+TT=[];TTT=[];  %%%ä¸ºè®°å½•ä¸‹é¢è®¡ç®—å¾—å‡ºçš„é‡ï¼Œéœ€è¦å…ˆè®¾ç½®ä¸¤ä¸ªç©ºå˜é‡
+%%%%%%%%%%%%%è®¡ç®—å¾—åˆ°ä¸è§„åˆ™é‡‡æ ·æ•°æ®çš„å‘¨æœŸ
 for i=1:length(dm(1,:))
 if i==1
         T=ts(1);tt=0;
@@ -24,7 +24,7 @@ if i==1
 end
 end
  
-%%%%%%%%%%%Ñ¡ÔñÄ£ÐÍ²ÎÊý
+%%%%%%%%%%%é€‰æ‹©æ¨¡åž‹å‚æ•°
  ax=1/20;
  xamax=3;
  qqx=(xamax)^2*(4-pi)/pi;
@@ -38,16 +38,15 @@ xe=[0 0 0 0 0 0]';
  
 M=10;
  
-ap=4;v=4;
-R=(0.2303*ap/v)^2;
+R=(0.2303*ap/r)^2;
  
-%%%¹À¼ÆºáÖá¡¢×ÝÖáÊ¹ÓÃ×îÐ¡¶þ³Ë¹À¼ÆEKF·½·¨£¬ 
+%%%ä¼°è®¡æ¨ªè½´ã€çºµè½´ä½¿ç”¨æœ€å°äºŒä¹˜ä¼°è®¡EKFæ–¹æ³•ï¼Œ 
 %[xx1,xxe1,P33,NN]=funDataDrivenModelYWwithEKF(TT,R,ax,qqx,ay,qqy,xe,p,dm,N,readerxy);
  
-%%%%Ê¹ÓÃUKF¼ÆËãµÄ·½·¨£¬¿ÉÒÔ½ÚÔ¼¼ÆËãÊ±¼ä£¬¹À¼ÆºáÖá¡¢×ÝÖáÊ¹ÓÃ×îÐ¡¶þ³Ë¹À¼ÆYule-Walker·½·¨
+%%%%ä½¿ç”¨UKFè®¡ç®—çš„æ–¹æ³•ï¼Œå¯ä»¥èŠ‚çº¦è®¡ç®—æ—¶é—´ï¼Œä¼°è®¡æ¨ªè½´ã€çºµè½´ä½¿ç”¨æœ€å°äºŒä¹˜ä¼°è®¡Yule-Walkeræ–¹æ³•
 [xx1,xxe1,P33,NN,qqxx,RR0x,RR0y]=funDataDrivenModelYWnonparell(TT,R,ax,qqx,ay,qqy,xe,p,dm,N,readerxy);
 
-cov1=xys-[xx1(1,:);xx1(4,:)];%¼ÆËã·½²î
+cov1=xys-[xx1(1,:);xx1(4,:)];%è®¡ç®—æ–¹å·®
 mm=mean(cov1,2);
 cov1=[cov1(1,:)-mm(1);cov1(2,:)-mm(2)];
 cov1=diag(cov1*cov1');
@@ -58,7 +57,7 @@ end
  
 covvv;
 XY=sum(covvv,2)/N   
- %%%%%»­³ö½á¹û
+ %%%%%ç”»å‡ºç»“æžœ
 XY2=sqrt(XY(1)*XY(1)+XY(2)*XY(2))
 plot(xys(1,:),xys(2,:),'k-.','LineWidth',4);hold on
 plot(xx1(1,:),xx1(4,:),'r*');hold off
